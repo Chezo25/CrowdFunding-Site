@@ -15,5 +15,8 @@ contract CrowdFunding {
 
     }
 
-    mapping(uint256 => )
+       // so we can access
+    mapping(uint256 => Campaign) public campaign;
+
+    uint256 public numberOfCampaigns = 0;
 }
