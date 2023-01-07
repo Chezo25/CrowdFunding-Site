@@ -27,7 +27,24 @@ const SideBar = () => {
       {/* for the other icons to apper */}
       <div className="flex-1 flex flex-col justify-between items-center 
       bg-[#1c1c24] rounded-[20px] w-[76px] py-4 mt-12">
-        <div className="flex flex-col justify-center items-center gap-3"></div>
+        <div className="flex flex-col justify-center items-center gap-3">
+          {/* the hover over icon on click function */}
+          {navlinks.map((link) => (
+            <Icon
+              key={link.name}
+              {...link}
+              isActive={isActive}
+              handleClick={() => {
+                if(!link.disabled) {
+                  setIsActive(link.name);
+                  navigate(link.link);
+                }
+              }}
+            />
+          ))}
+        </div>
+              {/* for the navigation sun icon */}
+        <Icon styles="bg-[#1c1c24] shadow-secondary" imgUrl={sun} />
       </div>
     </div>
   )
