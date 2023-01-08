@@ -1,7 +1,7 @@
 export { default as Sidebar }
-from './Sidebar';
+from './SideBar';
 export { default as Navbar }
-from './Navbar';
+from './NavBar';
 export { default as CustomButton }
 from './CustomButton';
 export { default as FormField }
