@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 
-import { SideBar, NavBar } from './components';
+import { SideBar, NavBar } from './components/index';
 import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 
 const App = () => {
