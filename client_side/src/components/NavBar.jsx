@@ -67,6 +67,7 @@ const NavBar = () => {
                     navigate(link.link);
                   }}
                 >
+                {/* the color for the sidebar functionality */}
                   <img 
                     src={link.imgUrl}
                     alt={link.name}
