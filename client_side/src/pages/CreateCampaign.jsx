@@ -20,7 +20,13 @@ const CreateCampaign = () => {
     image: ''
   });
 
-  const handleSubmit = () => {}
+
+  const handleFormFieldChange = (fieldName, e) => {
+    setForm({ ...form, [fieldName]: e.target.value })
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
 
 
   return (
