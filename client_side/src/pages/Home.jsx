@@ -25,7 +25,12 @@ const Home = () => {
 
 
   return (
-    <div>Home</div>
+    // shows the campaign cards
+    <DisplayCampaigns
+      title="All Campaigns"
+      isLoading={isLoading}
+      campaigns={campaigns}
+    />
   )
 }
 
