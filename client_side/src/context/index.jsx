@@ -47,6 +47,7 @@ export const StateContextProvider = ({ children }) => {
     return parsedCampaings;
   }
 
+  // this section is for user profile
   const getUserCampaigns = async () => {
     const allCampaigns = await getCampaigns();
 
