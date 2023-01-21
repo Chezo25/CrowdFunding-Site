@@ -38,6 +38,21 @@ const CampaignDetails = () => {
           <CountBox title="Total Backers" value={donators.length} />
         </div>
       </div>
+
+        <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
+            <div className="flex-[2] flex flex-col gap-[40px]">
+                <div>
+                     <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">Creator</h4>
+
+                     <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
+                        <div className="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-[#2c2f32] cursor-pointer">
+                            <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain"/>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+      
     </div>
   )
 }
