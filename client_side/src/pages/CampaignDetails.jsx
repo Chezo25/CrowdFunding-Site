@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 
 import { useStateContext } from '../context';
 import { CountBox, CustomButton, Loader } from '../components';
@@ -17,6 +17,25 @@ const CampaignDetails = () => {
   const [donators, setDonators] = useState([]);
 
   const remainingDays = daysLeft(state.deadline);
+
+  const fetchDonators = async () => {
+    const data = await getDonations(state.pId);
+
+    setDonators(data);
+  }
+
+  useEffect(() => {
+    if(contract) fetchDonators();
+  }, [contract, address])
+
+  const handleDonate = async () => {
+    setIsLoading(true);
+
+    await donate(state.pId, amount); 
+
+    navigate('/')
+    setIsLoading(false);
+  }
 
 
   return (
